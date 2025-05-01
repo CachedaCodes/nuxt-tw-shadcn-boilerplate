@@ -21,11 +21,10 @@
     "@iconify-json/twemoji": "catalog:icons",
     "@nuxt/devtools": "catalog:build",
     "@nuxt/eslint": "catalog:build",
+    "@nuxt/icon": "1.12.0",
     "@nuxt/test-utils": "^3.17.2",
     "@nuxtjs/color-mode": "catalog:build",
     "@pinia/nuxt": "catalog:build",
-    "@unocss/eslint-config": "catalog:build",
-    "@unocss/nuxt": "catalog:build",
     "@vite-pwa/nuxt": "catalog:build",
     "@vue/test-utils": "^2.4.6",
     "@vueuse/core": "catalog:frontend",
@@ -37,7 +36,6 @@
     "pinia": "catalog:frontend",
     "playwright-core": "^1.52.0",
     "typescript": "catalog:dev",
-    "unocss": "catalog:build",
     "vitest": "^3.1.2",
     "vue": "catalog:frontend",
     "vue-tsc": "catalog:dev"
@@ -46,5 +44,10 @@
     "@nuxt/devtools": "catalog:build",
     "unplugin": "catalog:build",
     "vite": "catalog:build"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.5",
+    "install": "^0.13.0",
+    "tailwindcss": "^4.1.5"
   }
 }

@@ -1,20 +1,23 @@
 import { pwa } from './app/config/pwa'
 import { appDescription } from './app/constants/index'
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
   modules: [
     '@vueuse/nuxt',
-    '@unocss/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
     '@vite-pwa/nuxt',
     '@nuxt/eslint',
-    '@nuxt/test-utils/module'
+    '@nuxt/test-utils/module',
+    '@nuxt/icon',
   ],
 
   devtools: {
     enabled: true,
   },
+
+  css: ['./assets/css/main.css'],
 
   app: {
     head: {
@@ -33,6 +36,13 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
+  },
+
 
   colorMode: {
     classSuffix: '',

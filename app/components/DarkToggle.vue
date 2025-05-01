@@ -9,13 +9,15 @@ useHead({
   }],
 })
 
+const toggleIcon = computed(() => color.value === 'light' ? 'carbon:sun' : 'carbon:moon')
+
 function toggleDark() {
   color.preference = color.value === 'dark' ? 'light' : 'dark'
 }
 </script>
 
 <template>
-  <button class="!outline-none" @click="toggleDark">
-    <div class="i-carbon-sun dark:i-carbon-moon" />
+  <button class="outline-none" @click="toggleDark">
+    <Icon :name="toggleIcon" />
   </button>
 </template>

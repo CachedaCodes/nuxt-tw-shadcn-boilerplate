@@ -14,17 +14,17 @@ definePageMeta({
 
 <template>
   <div>
-    <div i-twemoji:waving-hand text-4xl inline-block animate-shake-x animate-duration-5000 />
-    <h3 text-2xl font-500>
+    <Icon name="twemoji:waving-hand" class="text-4xl inline-block animate-bounce" />
+    <h3 class="text-2xl font-medium">
       Hi,
     </h3>
-    <div text-xl>
+    <div class="text-xl">
       {{ name }}!
     </div>
 
     <template v-if="user.otherNames.length">
-      <div text-sm my-4>
-        <span op-50>Also as known as:</span>
+      <div class="text-sm my-4">
+        <span class="opacity-50">Also as known as:</span>
         <ul>
           <li v-for="otherName in user.otherNames" :key="otherName">
             <router-link :to="`/hi/${otherName}`" replace>

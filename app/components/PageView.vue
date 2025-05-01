@@ -5,9 +5,9 @@ const time = useTimeAgo(() => data.value?.startAt || 0)
 </script>
 
 <template>
-  <div text-gray:80>
-    <span text-gray font-500>{{ data?.pageview }}</span>
+  <div class="text-gray-500">
+    <span class="text-gray-400 font-medium">{{ data?.pageview }}</span>
     page views since
-    <span text-gray>{{ time }}</span>
+    <span class="text-gray-400">{{ time }}</span>
   </div>
 </template>
