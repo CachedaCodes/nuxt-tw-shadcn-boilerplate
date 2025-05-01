@@ -20,13 +20,13 @@ function go() {
       @keydown.enter="go"
     >
     <div>
-      <button
-        class="text-sm m-3 btn"
+      <UiButton
+        class="text-sm m-3"
         :disabled="!name"
         @click="go"
       >
         GO
-      </button>
+      </UiButton>
     </div>
   </div>
 </template>

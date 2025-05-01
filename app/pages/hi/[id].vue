@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { navigateTo } from '#app';
+
 const route = useRoute<'hi-id'>()
 const user = useUserStore()
 const name = route.params.id
@@ -38,12 +40,12 @@ definePageMeta({
     <Counter />
 
     <div>
-      <NuxtLink
-        class="text-sm m-3 btn"
-        to="/"
+      <UiButton
+        class="text-sm m-3"
+        @click="navigateTo('/')"
       >
         Back
-      </NuxtLink>
+      </UiButton>
     </div>
   </div>
 </template>

@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/test-utils/module',
     '@nuxt/icon',
+    'shadcn-nuxt',
   ],
 
   devtools: {
@@ -82,6 +83,10 @@ export default defineNuxtConfig({
         sortConfigKeys: true,
       },
     },
+  },
+  shadcn: {
+    prefix: 'ui',
+    componentDir: './components/ui'
   },
 
   pwa,

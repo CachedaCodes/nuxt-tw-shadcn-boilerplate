@@ -17,7 +17,5 @@ function toggleDark() {
 </script>
 
 <template>
-  <button class="outline-none" @click="toggleDark">
-    <Icon :name="toggleIcon" />
-  </button>
+  <IconButton :name="toggleIcon" class="outline-none" @click="toggleDark" />
 </template>
