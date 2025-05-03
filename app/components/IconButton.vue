@@ -3,7 +3,7 @@ interface Props {
   name: string
 }
 
-defineProps<Props>()
+defineProps<Props>();
 </script>
 
 <template>

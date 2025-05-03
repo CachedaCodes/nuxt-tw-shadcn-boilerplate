@@ -1,9 +1,9 @@
 <script setup lang="ts">
 definePageMeta({
-  layout: 'home',
-})
+  layout: 'home'
+});
 
-const online = useOnline()
+const online = useOnline();
 </script>
 
 <template>

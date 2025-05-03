@@ -11,6 +11,7 @@
     "start": "node .output/server/index.mjs",
     "start:generate": "npx serve .output/public",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "typecheck": "nuxi typecheck",
     "test": "vitest run",
     "test:watch": "vitest"
@@ -19,6 +20,7 @@
     "@tailwindcss/vite": "catalog:tailwind",
     "class-variance-authority": "catalog:frontend",
     "clsx": "catalog:frontend",
+    "eslint-plugin-vue": "^10.1.0",
     "husky": "catalog:dev",
     "install": "catalog:server",
     "lucide-vue-next": "catalog:frontend",
@@ -31,11 +33,10 @@
     "zod": "catalog:frontend"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "catalog:dev",
     "@iconify-json/carbon": "catalog:icons",
     "@iconify-json/twemoji": "catalog:icons",
     "@nuxt/devtools": "catalog:build",
-    "@nuxt/eslint": "catalog:build",
+    "@nuxt/eslint": "1.3.0",
     "@nuxt/icon": "catalog:build",
     "@nuxt/test-utils": "catalog:build",
     "@nuxtjs/color-mode": "catalog:build",
@@ -45,8 +46,7 @@
     "@vue/test-utils": "catalog:dev",
     "@vueuse/core": "catalog:frontend",
     "@vueuse/nuxt": "catalog:build",
-    "eslint": "catalog:dev",
-    "eslint-plugin-format": "catalog:dev",
+    "eslint": "^9.0.0",
     "happy-dom": "catalog:dev",
     "lint-staged": "catalog:dev",
     "nuxt": "catalog:build",

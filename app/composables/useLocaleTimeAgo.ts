@@ -34,11 +34,11 @@ export function useLocaleTimeAgo(date: Parameters<typeof useTimeAgo>[0]) {
         hour: (n) => `${n} ${t('common.timeAgo.hour', n)}`,
         minute: (n) => `${n} ${t('common.timeAgo.minute', n)}`,
         second: (n) => `${n} ${t(`common.timeAgo.second`, n)}`,
-        invalid: '',
+        invalid: ''
     };
 
     return useTimeAgo(date, {
         fullDateFormatter: (date: Date) => date.toLocaleDateString(),
-        messages: I18N_MESSAGES,
+        messages: I18N_MESSAGES
     });
 }

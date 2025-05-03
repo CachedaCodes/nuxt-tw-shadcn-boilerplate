@@ -1,5 +1,5 @@
-import { pwa } from './app/config/pwa'
-import { appDescription } from './app/constants/index'
+import { pwa } from './app/config/pwa';
+import { appDescription } from './app/constants/index';
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
@@ -12,16 +12,16 @@ export default defineNuxtConfig({
     '@nuxt/test-utils/module',
     '@nuxt/icon',
     'shadcn-nuxt',
-    '@nuxtjs/i18n',
+    '@nuxtjs/i18n'
   ],
 
   devtools: {
-    enabled: true,
+    enabled: true
   },
 
   runtimeConfig: {
     telegramLogBotToken: '',
-    telegramLogChatId: '',
+    telegramLogChatId: ''
   },
 
   css: ['./assets/css/main.css'],
@@ -32,31 +32,31 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
         { rel: 'icon', type: 'image/svg+xml', href: '/nuxt.svg' },
-        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }
       ],
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: appDescription },
         { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
         { name: 'theme-color', media: '(prefers-color-scheme: light)', content: 'white' },
-        { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#222222' },
-      ],
-    },
+        { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#222222' }
+      ]
+    }
   },
 
   vite: {
     plugins: [
-      tailwindcss(),
-    ],
+      tailwindcss()
+    ]
   },
 
 
   colorMode: {
-    classSuffix: '',
+    classSuffix: ''
   },
 
   future: {
-    compatibilityVersion: 4,
+    compatibilityVersion: 4
   },
 
   experimental: {
@@ -64,7 +64,7 @@ export default defineNuxtConfig({
     // but missing on offline, disabling extraction it until fixed
     payloadExtraction: false,
     renderJsonPayloads: true,
-    typedPages: true,
+    typedPages: true
   },
 
   compatibilityDate: '2024-08-14',
@@ -72,23 +72,14 @@ export default defineNuxtConfig({
   nitro: {
     esbuild: {
       options: {
-        target: 'esnext',
-      },
+        target: 'esnext'
+      }
     },
     prerender: {
       crawlLinks: false,
       routes: ['/'],
-      ignore: ['/hi'],
-    },
-  },
-
-  eslint: {
-    config: {
-      standalone: false,
-      nuxt: {
-        sortConfigKeys: true,
-      },
-    },
+      ignore: ['/hi']
+    }
   },
   shadcn: {
     prefix: 'ui',
@@ -107,5 +98,5 @@ export default defineNuxtConfig({
     }
   },
 
-  pwa,
-})
+  pwa
+});

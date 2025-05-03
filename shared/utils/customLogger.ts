@@ -4,21 +4,23 @@
  */
 type LogLevel = 'log' | 'warn' | 'error' | 'info' | 'debug';
 
+type LogParams = Parameters<typeof console['log']>
+
 /**
  * Type definition for the logger object with methods for different log levels
  */
 interface Logger {
-  log: (...args: any[]) => void;
-  warn: (...args: any[]) => void;
-  error: (...args: any[]) => void;
-  info: (...args: any[]) => void;
-  debug: (...args: any[]) => void;
+  log: (...args: LogParams) => void;
+  warn: (...args: LogParams) => void;
+  error: (...args: LogParams) => void;
+  info: (...args: LogParams) => void;
+  debug: (...args: LogParams) => void;
   telegram: {
-    log: (...args: any[]) => Promise<void>;
-    warn: (...args: any[]) => Promise<void>;
-    error: (...args: any[]) => Promise<void>;
-    info: (...args: any[]) => Promise<void>;
-    debug: (...args: any[]) => Promise<void>;
+    log: (...args: LogParams) => Promise<void>;
+    warn: (...args: LogParams) => Promise<void>;
+    error: (...args: LogParams) => Promise<void>;
+    info: (...args: LogParams) => Promise<void>;
+    debug: (...args: LogParams) => Promise<void>;
   };
 }
 
@@ -32,17 +34,17 @@ interface Logger {
  */
 export function createLogger(prefix: string): Logger {
     const logMethods = {
-        log: (...args: any[]) => console.log(`[${prefix}]`, ...args),
-        warn: (...args: any[]) => console.warn(`[${prefix}]`, ...args),
-        error: (...args: any[]) => console.error(`[${prefix}]`, ...args),
-        info: (...args: any[]) => console.info(`[${prefix}]`, ...args),
-        debug: (...args: any[]) => console.debug(`[${prefix}]`, ...args),
-    }
+        log: (...args: LogParams) => console.log(`[${prefix}]`, ...args),
+        warn: (...args: LogParams) => console.warn(`[${prefix}]`, ...args),
+        error: (...args: LogParams) => console.error(`[${prefix}]`, ...args),
+        info: (...args: LogParams) => console.info(`[${prefix}]`, ...args),
+        debug: (...args: LogParams) => console.debug(`[${prefix}]`, ...args)
+    };
     const isDev = import.meta.dev;
   
   const createTelegramMethod = (level: LogLevel) => {
     
-    return async (...args: any[]): Promise<void> => {
+    return async (...args: LogParams): Promise<void> => {
       logMethods[level](...args);
 
       if(isDev) {
@@ -65,10 +67,10 @@ export function createLogger(prefix: string): Logger {
           throw error.value;
         }
 
-        logMethods.log(data.value!.message)
+        logMethods.log(data.value!.message);
       }).catch((error) => {
         logMethods.error(error);
-      })
+      });
     };
   };
   

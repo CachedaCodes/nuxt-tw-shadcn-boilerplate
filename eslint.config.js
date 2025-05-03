@@ -1,12 +1,13 @@
 // @ts-check
-import antfu from '@antfu/eslint-config'
-import nuxt from './.nuxt/eslint.config.mjs'
+import withNuxt from './.nuxt/eslint.config.mjs';
 
-export default antfu(
+export default withNuxt(
   {
-    unocss: false,
-    formatters: true,
-    pnpm: true,
-  },
-)
-  .append(nuxt())
+    rules: {
+      'vue/multi-word-component-names': 'off',
+      'vue/require-default-prop': 'off',
+      'semi': ['error', 'always'],
+      'comma-dangle': ['error', 'never']
+    }
+  }
+);

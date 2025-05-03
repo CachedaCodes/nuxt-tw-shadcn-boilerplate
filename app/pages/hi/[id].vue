@@ -1,17 +1,17 @@
 <script setup lang="ts">
 import { navigateTo } from '#app';
 
-const route = useRoute<'hi-id'>()
-const user = useUserStore()
-const name = route.params.id
+const route = useRoute<'hi-id'>();
+const user = useUserStore();
+const name = route.params.id;
 
 watchEffect(() => {
-  user.setNewName(route.params.id as string)
-})
+  user.setNewName(route.params.id as string);
+});
 
 definePageMeta({
-  layout: 'home',
-})
+  layout: 'home'
+});
 </script>
 
 <template>

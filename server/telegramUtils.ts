@@ -6,8 +6,8 @@ const telegramLogBot = new TelegramBot(telegramLogBotToken, { polling: false });
 
 telegramLogBot.logMessage = async (message: string) => {
     await telegramLogBot.sendMessage(telegramLogChatId, message);
-}
+};
 
 export {
     telegramLogBot
-}
+};
