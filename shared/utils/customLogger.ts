@@ -38,9 +38,17 @@ export function createLogger(prefix: string): Logger {
         info: (...args: any[]) => console.info(`[${prefix}]`, ...args),
         debug: (...args: any[]) => console.debug(`[${prefix}]`, ...args),
     }
+    const isDev = import.meta.dev;
   
   const createTelegramMethod = (level: LogLevel) => {
+    
     return async (...args: any[]): Promise<void> => {
+      logMethods[level](...args);
+
+      if(isDev) {
+        return Promise.resolve();
+      }
+
       const message = [`[${prefix}]`, ...args].map(arg => 
         typeof arg === 'object' ? JSON.stringify(arg) : String(arg)
       ).join('\n');
