@@ -18,6 +18,11 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
+  runtimeConfig: {
+    telegramLogBotToken: '',
+    telegramLogChatId: '',
+  },
+
   css: ['./assets/css/main.css'],
 
   app: {

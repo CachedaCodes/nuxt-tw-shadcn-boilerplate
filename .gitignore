@@ -6,4 +6,5 @@ dist
 .nuxt
 .env
 .idea/
+.vscode/
 public/assets/fonts
