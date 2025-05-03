@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     '@nuxt/test-utils/module',
     '@nuxt/icon',
     'shadcn-nuxt',
+    '@nuxtjs/i18n',
   ],
 
   devtools: {
@@ -92,6 +93,18 @@ export default defineNuxtConfig({
   shadcn: {
     prefix: 'ui',
     componentDir: './components/ui'
+  },
+
+  i18n: {
+    strategy: 'prefix',
+    defaultLocale: 'en',
+    locales: [
+      { code: 'en', name: 'English', file: 'en.json' },
+      { code: 'es', name: 'Spanish', file: 'es.json' }
+    ],
+    experimental: {
+      localeDetector: 'localeDetector.ts'
+    }
   },
 
   pwa,

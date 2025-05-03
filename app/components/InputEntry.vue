@@ -13,7 +13,7 @@ function go() {
     <input
       id="input"
       v-model="name"
-      placeholder="What's your name?"
+      :placeholder="$t('inputEntry.placeholder')"
       type="text"
       autocomplete="off"
       class="px-4 py-2 mt-5 w-[250px] text-center bg-transparent border rounded border-gray-200 dark:border-gray-700 outline-none focus:outline-none"
@@ -25,7 +25,7 @@ function go() {
         :disabled="!name"
         @click="go"
       >
-        GO
+        {{ $t('common.button.go') }}
       </UiButton>
     </div>
   </div>

@@ -18,15 +18,15 @@ definePageMeta({
   <div>
     <Icon name="twemoji:waving-hand" class="text-4xl inline-block animate-bounce" />
     <h3 class="text-2xl font-medium">
-      Hi,
+    {{ $t('hi.greeting') }},
     </h3>
     <div class="text-xl">
-      {{ name }}!
+      {{ $t('common.exclamation', [name]) }}
     </div>
 
     <template v-if="user.otherNames.length">
       <div class="text-sm my-4">
-        <span class="opacity-50">Also as known as:</span>
+        <span class="opacity-50">{{ $t("hi.alsoKnown") }}:</span>
         <ul>
           <li v-for="otherName in user.otherNames" :key="otherName">
             <router-link :to="`/hi/${otherName}`" replace>
@@ -44,7 +44,7 @@ definePageMeta({
         class="text-sm m-3"
         @click="navigateTo('/')"
       >
-        Back
+        {{ $t('common.button.back') }}
       </UiButton>
     </div>
   </div>
