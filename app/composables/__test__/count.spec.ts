@@ -7,15 +7,15 @@ vi.mock('#app', () => ({
     // Create a reactive reference with the initial value
     const value = init();
     const ref = {
-      value
+      value,
     };
     return ref;
-  })
+  }),
 }));
 
 describe('useCount', () => {
   let count: ReturnType<typeof useCount>;
-  
+
   beforeEach(() => {
     // Reset the random number seed to ensure consistent tests
     vi.spyOn(Math, 'random').mockReturnValue(0.5);

@@ -1,6 +1,6 @@
 import { pwa } from './app/config/pwa';
 import { appDescription } from './app/constants/index';
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineNuxtConfig({
   modules: [
@@ -12,16 +12,16 @@ export default defineNuxtConfig({
     '@nuxt/test-utils/module',
     '@nuxt/icon',
     'shadcn-nuxt',
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
   ],
 
   devtools: {
-    enabled: true
+    enabled: true,
   },
 
   runtimeConfig: {
     telegramLogBotToken: '',
-    telegramLogChatId: ''
+    telegramLogChatId: '',
   },
 
   css: ['./assets/css/main.css'],
@@ -32,31 +32,39 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
         { rel: 'icon', type: 'image/svg+xml', href: '/nuxt.svg' },
-        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }
+        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
       ],
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: appDescription },
-        { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
-        { name: 'theme-color', media: '(prefers-color-scheme: light)', content: 'white' },
-        { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#222222' }
-      ]
-    }
+        {
+          name: 'apple-mobile-web-app-status-bar-style',
+          content: 'black-translucent',
+        },
+        {
+          name: 'theme-color',
+          media: '(prefers-color-scheme: light)',
+          content: 'white',
+        },
+        {
+          name: 'theme-color',
+          media: '(prefers-color-scheme: dark)',
+          content: '#222222',
+        },
+      ],
+    },
   },
 
   vite: {
-    plugins: [
-      tailwindcss()
-    ]
+    plugins: [tailwindcss()],
   },
 
-
   colorMode: {
-    classSuffix: ''
+    classSuffix: '',
   },
 
   future: {
-    compatibilityVersion: 4
+    compatibilityVersion: 4,
   },
 
   experimental: {
@@ -64,7 +72,7 @@ export default defineNuxtConfig({
     // but missing on offline, disabling extraction it until fixed
     payloadExtraction: false,
     renderJsonPayloads: true,
-    typedPages: true
+    typedPages: true,
   },
 
   compatibilityDate: '2024-08-14',
@@ -72,18 +80,18 @@ export default defineNuxtConfig({
   nitro: {
     esbuild: {
       options: {
-        target: 'esnext'
-      }
+        target: 'esnext',
+      },
     },
     prerender: {
       crawlLinks: false,
       routes: ['/'],
-      ignore: ['/hi']
-    }
+      ignore: ['/hi'],
+    },
   },
   shadcn: {
     prefix: 'ui',
-    componentDir: './components/ui'
+    componentDir: './components/ui',
   },
 
   i18n: {
@@ -91,12 +99,12 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
     locales: [
       { code: 'en', name: 'English', file: 'en.json' },
-      { code: 'es', name: 'Spanish', file: 'es.json' }
+      { code: 'es', name: 'Spanish', file: 'es.json' },
     ],
     experimental: {
-      localeDetector: 'localeDetector.ts'
-    }
+      localeDetector: 'localeDetector.ts',
+    },
   },
 
-  pwa
+  pwa,
 });

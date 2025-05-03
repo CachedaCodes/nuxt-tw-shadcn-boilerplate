@@ -7,7 +7,7 @@ const time = useLocaleTimeAgo(() => data.value?.startAt || 0);
 <template>
   <div class="text-gray-500">
     <span class="text-gray-400 font-medium">{{ data?.pageview }}</span>
-    {{ $t("pageView.viewsSince") }}
+    {{ $t('pageView.viewsSince') }}
     <span class="text-gray-400">{{ time }}</span>
   </div>
 </template>

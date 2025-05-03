@@ -4,35 +4,36 @@
   },
   "pageView": {
     "viewsSince": "visitas desde"
-  },"hi": {
+  },
+  "hi": {
     "greeting": "Hola",
     "alsoKnown": "También conocido como"
   },
   "common": {
     "exclamation": "¡{0}!",
     "button": {
-        "go": "IR",
-        "back": "ATRAS"
+      "go": "IR",
+      "back": "ATRAS"
     },
     "timeAgo": {
-        "just-now": "justo ahora",
-        "ago": "hace {0}",
-        "in": "en {0}",
-        "last-month": "el mes pasado",
-        "next-month": "el próximo mes",
-        "month": "mes | meses",
-        "last-year": "el año pasado",
-        "next-year": "el próximo año",
-        "year": "año | años",
-        "yesterday": "ayer",
-        "tomorrow": "mañana",
-        "day": "día | días",
-        "last-week": "la semana pasada",
-        "next-week": "la próxima semana",
-        "week": "semana | semanas",
-        "hour": "hora | horas",
-        "minute": "minuto | minutos",
-        "second": "segundo | segundos"
+      "just-now": "justo ahora",
+      "ago": "hace {0}",
+      "in": "en {0}",
+      "last-month": "el mes pasado",
+      "next-month": "el próximo mes",
+      "month": "mes | meses",
+      "last-year": "el año pasado",
+      "next-year": "el próximo año",
+      "year": "año | años",
+      "yesterday": "ayer",
+      "tomorrow": "mañana",
+      "day": "día | días",
+      "last-week": "la semana pasada",
+      "next-week": "la próxima semana",
+      "week": "semana | semanas",
+      "hour": "hora | horas",
+      "minute": "minuto | minutos",
+      "second": "segundo | segundos"
     }
-    }
+  }
 }
