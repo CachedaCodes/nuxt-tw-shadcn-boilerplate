@@ -1,4 +1,4 @@
-import { telegramLogBot } from "../telegramUtils";
+import { telegramLogBot } from "~~/server/telegramUtils";
 import { z } from "zod";
 
 const mobileLogSchema = z.object({
