@@ -1,17 +1,6 @@
-<p align="center">
-<img src="https://user-images.githubusercontent.com/11247099/140462375-7b7ac4db-35b7-453c-8a05-13d8d20282c4.png" width="600"/>
-</p>
-
 <h2 align="center">
-<a href="https://github.com/antfu/vitesse">Vitesse</a> for Nuxt 3
+Nuxt + Tailwind 4 + shadcn Boilerplate
 </h2><br>
-
-<p align="center">
-<br>
-<a href="https://vitesse-nuxt3.netlify.app/">🖥 Online Preview</a>
-<br><br>
-<a href="https://stackblitz.com/github/antfu/vitesse-nuxt"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt=""></a>
-</p>
 
 ## Features
 
@@ -19,9 +8,11 @@
 
 - ⚡️ Vite - Instant HMR.
 
-- 🎨 [UnoCSS](https://github.com/unocss/unocss) - The instant on-demand atomic CSS engine.
+- 🎨 [Tailwind CSS 4](https://tailwindcss.com/) - Utility-first CSS framework for rapidly building custom designs.
 
-- 😃 Use icons from any icon sets in Pure CSS, powered by [UnoCSS](https://github.com/unocss/unocss).
+- 🧩 [shadcn/ui](https://ui.shadcn.com/) - Beautifully designed components built with Radix UI and Tailwind CSS.
+
+- 😃 Use icons from any icon sets in Pure CSS.
 
 - 🔥 The `<script setup>` syntax.
 
@@ -30,6 +21,12 @@
 - 📑 [Layout system](./app/layouts).
 
 - 📥 APIs auto importing - for Composition API, VueUse and custom composables.
+
+- 🌍 [i18n](https://i18n.nuxtjs.org/) - Internationalization support for your Nuxt application.
+
+- ✅ [Vitest](https://vitest.dev/) - Blazing fast unit test framework powered by Vite.
+
+- 🛡️ [Zod](https://zod.dev/) - TypeScript-first schema validation with static type inference.
 
 - 🏎 Zero-config cloud functions and deploy.
 
@@ -43,21 +40,19 @@
 
 - [VueUse](https://github.com/vueuse/vueuse) - collection of useful composition APIs.
 - [ColorMode](https://github.com/nuxt-modules/color-mode) - dark and Light mode with auto detection made easy with Nuxt.
-- [UnoCSS](https://github.com/unocss/unocss) - the instant on-demand atomic CSS engine.
+- [Tailwind](https://github.com/tailwindlabs/tailwindcss) - a utility-first CSS framework for rapidly building custom user interfaces..
 - [Pinia](https://github.com/vuejs/pinia) - intuitive, type safe, light and flexible Store for Vue.
 - [VitePWA](https://github.com/vite-pwa/nuxt) - zero-config PWA Plugin for Nuxt 3.
 - [DevTools](https://github.com/nuxt/devtools) - unleash Nuxt Developer Experience.
+- [i18n](https://github.com/nuxt-modules/i18n) - internationalization (i18n) for Nuxt apps
 
 ## IDE
 
 We recommend using [VS Code](https://code.visualstudio.com/) with [Volar](https://github.com/johnsoncodehk/volar) to get the best experience (You might want to disable [Vetur](https://vuejs.github.io/vetur/) if you have it).
 
-## Variations
+## Forked From
 
-- [vitesse](https://github.com/antfu/vitesse) - Opinionated Vite Starter Template
-- [vitesse-lite](https://github.com/antfu/vitesse-lite) - Lightweight version of Vitesse
-- [vitesse-nuxt-bridge](https://github.com/antfu/vitesse-nuxt-bridge) - Vitesse for Nuxt 2 with Bridge
-- [vitesse-webext](https://github.com/antfu/vitesse-webext) - WebExtension Vite starter template
+- [vitesse-nuxt](https://github.com/antfu/vitesse-nuxt)
 
 ## Try it now!
 
@@ -67,14 +62,14 @@ We recommend using [VS Code](https://code.visualstudio.com/) with [Volar](https:
 
 ### GitHub Template
 
-[Create a repo from this template on GitHub](https://github.com/antfu/vitesse-nuxt/generate).
+[Create a repo from this template on GitHub](https://https://github.com/CachedaCodes/nuxt-tw-shadcn-boilerplate/generate).
 
 ### Clone to local
 
 If you prefer to do it manually with the cleaner git history
 
 ```bash
-npx degit antfu/vitesse-nuxt my-nuxt-app
+npx degit CachedaCodes/nuxt-tw-shadcn-boilerplate
 cd my-nuxt-app
 pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
 ```
