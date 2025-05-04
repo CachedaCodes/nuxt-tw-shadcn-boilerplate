@@ -1,4 +1,4 @@
 {
   "*.{js,jsx,ts,tsx,vue}": ["pnpm lint:fix", "git add"],
-  "*.{css,scss,md,json,yml,yaml}": ["pnpm lint:prettier", "git add"]
+  "*.{css,scss,md,json,yml,yaml}": ["prettier --write --list-different .", "git add"]
 }
