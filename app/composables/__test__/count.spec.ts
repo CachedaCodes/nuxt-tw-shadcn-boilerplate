@@ -1,17 +1,12 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { useCount } from '../count';
 
-// Mock the useState function from Nuxt
-vi.mock('#app', () => ({
-  useState: vi.fn((key, init) => {
-    // Create a reactive reference with the initial value
-    const value = init();
-    const ref = {
-      value,
-    };
-    return ref;
-  }),
-}));
+const useStateMock = vi.fn((key: string, init: () => number) => {
+  const value = init();
+  return { value };
+});
+
+vi.stubGlobal('useState', useStateMock);
 
 describe('useCount', () => {
   let count: ReturnType<typeof useCount>;

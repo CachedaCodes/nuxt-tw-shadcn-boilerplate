@@ -15,9 +15,9 @@ function go() {
       :placeholder="$t('inputEntry.placeholder')"
       type="text"
       autocomplete="off"
-      class="px-4 py-2 mt-5 w-[250px] text-center bg-transparent border rounded border-gray-200 dark:border-gray-700 outline-none focus:outline-none"
+      class="px-4 py-2 mt-5 w-62.5 text-center bg-transparent border rounded border-gray-200 dark:border-gray-700 outline-none focus:outline-none"
       @keydown.enter="go"
-    />
+    >
     <div>
       <UiButton class="text-sm m-3" :disabled="!name" @click="go">
         {{ $t('common.button.go') }}

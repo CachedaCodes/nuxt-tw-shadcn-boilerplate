@@ -2,16 +2,8 @@ import { telegramLogBot } from '~~/server/telegramUtils';
 import { z } from 'zod';
 
 const mobileLogSchema = z.object({
-  message: z
-    .string({
-      required_error: 'Message is required',
-    })
-    .min(1, 'Message cannot be empty'),
-  level: z
-    .string({
-      required_error: 'Level is required',
-    })
-    .min(1, 'Level cannot be empty'),
+  message: z.string().min(1, 'Message cannot be empty'),
+  level: z.string().min(1, 'Level cannot be empty'),
 });
 
 type MobileLogBody = z.infer<typeof mobileLogSchema>;
@@ -29,8 +21,8 @@ export default defineEventHandler(async (event) => {
     if (error instanceof z.ZodError) {
       throw createError({
         statusCode: 400,
-        statusMessage: `Invalid input. ${error.errors.map((e) => e.message).join('; ')}`,
-        data: error.errors,
+        statusMessage: `Invalid input. ${error.issues.map((issue) => issue.message).join('; ')}`,
+        data: error.issues,
       });
     }
 

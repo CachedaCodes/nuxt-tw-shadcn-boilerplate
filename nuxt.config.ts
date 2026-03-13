@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
-    '@vite-pwa/nuxt',
+    ...(process.env.VITEST ? [] : ['@vite-pwa/nuxt']),
     '@nuxt/eslint',
     '@nuxt/test-utils/module',
     '@nuxt/icon',
@@ -24,7 +24,7 @@ export default defineNuxtConfig({
     telegramLogChatId: '',
   },
 
-  css: ['./assets/css/main.css'],
+  css: ['~/assets/css/main.css'],
 
   app: {
     head: {
@@ -72,7 +72,7 @@ export default defineNuxtConfig({
     // but missing on offline, disabling extraction it until fixed
     payloadExtraction: false,
     renderJsonPayloads: true,
-    typedPages: true,
+    typedPages: false,
   },
 
   compatibilityDate: '2024-08-14',
@@ -91,7 +91,7 @@ export default defineNuxtConfig({
   },
   shadcn: {
     prefix: 'ui',
-    componentDir: './components/ui',
+    componentDir: './app/components/ui',
   },
 
   i18n: {
@@ -101,9 +101,6 @@ export default defineNuxtConfig({
       { code: 'en', name: 'English', file: 'en.json' },
       { code: 'es', name: 'Spanish', file: 'es.json' },
     ],
-    experimental: {
-      localeDetector: 'localeDetector.ts',
-    },
   },
 
   pwa,

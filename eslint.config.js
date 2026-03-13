@@ -6,6 +6,6 @@ export default withNuxt({
     'vue/multi-word-component-names': 'off',
     'vue/require-default-prop': 'off',
     semi: ['error', 'always'],
-    'comma-dangle': ['error', 'never'],
+    'comma-dangle': ['error', 'always-multiline'],
   },
 });
