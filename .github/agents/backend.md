@@ -1,6 +1,6 @@
 ---
 name: backend
-description: "Backend development specialist. API design, microservices, cloud-native, serverless architecture."
+description: 'Backend development specialist. API design, microservices, cloud-native, serverless architecture.'
 model: sonnet
 tools:
   - Read

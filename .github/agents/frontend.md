@@ -1,6 +1,6 @@
 ---
 name: frontend
-description: "Frontend & UI/UX expert. WCAG 2.1 compliance, design systems, user-centered design. React/Vue/Angular optimization."
+description: 'Frontend & UI/UX expert. WCAG 2.1 compliance, design systems, user-centered design. React/Vue/Angular optimization.'
 model: sonnet
 tools:
   - Read
