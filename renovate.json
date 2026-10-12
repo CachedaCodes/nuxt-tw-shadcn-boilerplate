@@ -1,20 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended",
-    ":dependencyDashboard",
-    ":semanticCommits",
-    "schedule:weekly",
-    "group:monorepos",
-    "group:recommended"
-  ],
+  "extends": ["config:recommended", ":dependencyDashboard", ":semanticCommits", "group:monorepos", "group:recommended"],
   "timezone": "Europe/Madrid",
   "labels": ["dependencies"],
   "rangeStrategy": "bump",
   "rebaseWhen": "conflicted",
   "lockFileMaintenance": {
-    "enabled": true,
-    "schedule": ["before 6am on monday"]
+    "enabled": true
   },
   "packageRules": [
     {
