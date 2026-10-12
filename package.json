@@ -21,6 +21,7 @@
     "test:watch": "vitest"
   },
   "dependencies": {
+    "@lucide/vue": "catalog:frontend",
     "@tailwindcss/vite": "catalog:tailwind",
     "class-variance-authority": "catalog:frontend",
     "clsx": "catalog:frontend",
@@ -29,7 +30,6 @@
     "eslint-plugin-vue": "^10.11.0",
     "husky": "catalog:dev",
     "install": "catalog:server",
-    "lucide-vue-next": "catalog:frontend",
     "node-telegram-bot-api": "catalog:server",
     "nuxi": "catalog:build",
     "prettier": "^3.9.6",
