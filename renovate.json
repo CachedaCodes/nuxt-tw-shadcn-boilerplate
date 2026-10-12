@@ -22,6 +22,11 @@
   },
   "packageRules": [
     {
+      "description": "Node engine floor is maintained manually to avoid patch-floor churn",
+      "matchDepTypes": ["engines"],
+      "enabled": false
+    },
+    {
       "description": "Tooling pinned exactly in pnpm-workspace.yaml (eslint, typescript) - keep exact",
       "matchPackageNames": ["eslint", "typescript"],
       "rangeStrategy": "pin"
