@@ -22,7 +22,7 @@ catalogs:
     eslint: 9.39.5
     happy-dom: ^20.14.5
     husky: ^9.1.7
-    lint-staged: ^15.5.2
+    lint-staged: ^17.6.0
     playwright-core: ^1.63.0
     typescript: 5.9.3
     vitest: ^4.1.11
