@@ -23,7 +23,7 @@ catalogs:
     shadcn-nuxt: catalog.frontend
 
   dev:
-    '@antfu/eslint-config': ^4.11.0
+    '@antfu/eslint-config': ^4.19.0
     '@types/node-telegram-bot-api': ^0.64.15
     '@vue/test-utils': ^2.5.0
     eslint: 9.39.5
