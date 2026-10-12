@@ -1,0 +1,8 @@
+version: 2
+defaults:
+  issueRules:
+    newPackage:
+      action: error
+    tooNewPackage:
+      action: error
+      minimumAgeDays: 30
