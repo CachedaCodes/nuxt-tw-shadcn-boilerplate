@@ -1,0 +1,77 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":dependencyDashboard",
+    ":semanticCommits",
+    "schedule:weekly",
+    "group:monorepos",
+    "group:recommended"
+  ],
+  "timezone": "Europe/Madrid",
+  "labels": ["dependencies"],
+  "rangeStrategy": "bump",
+  "rebaseWhen": "conflicted",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 6am on monday"]
+  },
+  "packageRules": [
+    {
+      "description": "Tooling pinned exactly in pnpm-workspace.yaml (eslint, typescript) - keep exact",
+      "matchPackageNames": ["eslint", "typescript"],
+      "rangeStrategy": "pin"
+    },
+    {
+      "description": "Nuxt ecosystem together",
+      "matchPackageNames": ["nuxt", "nuxi", "@nuxt/**", "@nuxtjs/**", "shadcn-nuxt"],
+      "groupName": "nuxt"
+    },
+    {
+      "description": "Vue ecosystem together",
+      "matchPackageNames": ["vue", "@vue/**", "@vueuse/**", "pinia", "@pinia/**", "reka-ui"],
+      "groupName": "vue"
+    },
+    {
+      "description": "Lint & format toolchain together",
+      "matchPackageNames": [
+        "eslint",
+        "@nuxt/eslint",
+        "eslint-config-prettier",
+        "eslint-plugin-prettier",
+        "eslint-plugin-vue",
+        "prettier"
+      ],
+      "groupName": "lint"
+    },
+    {
+      "description": "Testing toolchain together",
+      "matchPackageNames": ["vitest", "@nuxt/test-utils", "@vue/test-utils", "happy-dom", "playwright-core"],
+      "groupName": "testing"
+    },
+    {
+      "description": "Tailwind & styling together",
+      "matchPackageNames": [
+        "tailwindcss",
+        "@tailwindcss/vite",
+        "tw-animate-css",
+        "tailwind-merge",
+        "class-variance-authority",
+        "clsx",
+        "lucide-vue-next"
+      ],
+      "groupName": "styling"
+    },
+    {
+      "description": "Major updates require manual approval from the Dependency Dashboard",
+      "matchUpdateTypes": ["major"],
+      "dependencyDashboardApproval": true,
+      "addLabels": ["major"]
+    },
+    {
+      "description": "Never auto-bump pinned runtime deps used by the Telegram bot without review",
+      "matchPackageNames": ["node-telegram-bot-api"],
+      "groupName": "telegram"
+    }
+  ]
+}
