@@ -4,7 +4,7 @@
   "timezone": "Europe/Madrid",
   "labels": ["dependencies"],
   "rangeStrategy": "bump",
-  "rebaseWhen": "auto",
+  "rebaseWhen": "behind-base-branch",
   "lockFileMaintenance": {
     "enabled": true
   },
