@@ -1,5 +1,7 @@
 packages: []
 
+catalogPrune: true
+
 catalogs:
   build:
     '@nuxt/devtools': ^3.4.2
@@ -9,25 +11,15 @@ catalogs:
     '@nuxtjs/color-mode': ^4.0.1
     '@nuxtjs/i18n': ^10.6.0
     '@pinia/nuxt': ^0.11.3
-    '@unocss/eslint-config': ^66.1.0-beta.10
-    '@unocss/nuxt': ^66.1.0-beta.10
     '@vite-pwa/nuxt': ^1.1.1
     '@vueuse/nuxt': ^14.4.0
     nuxi: ^3.37.0
     nuxt: ^4.5.2
-    unocss: ^66.1.0-beta.10
-    unplugin: ^2.2.2
-    vite: ^6.2.5
-
-  conflicts_frontend_catalog_frontend:
-    shadcn-nuxt: catalog.frontend
 
   dev:
-    '@antfu/eslint-config': ^4.11.0
     '@types/node-telegram-bot-api': ^0.64.15
     '@vue/test-utils': ^2.5.0
     eslint: 9.39.5
-    eslint-plugin-format: ^1.0.1
     happy-dom: ^20.14.5
     husky: ^9.1.7
     lint-staged: ^15.5.2
