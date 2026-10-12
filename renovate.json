@@ -12,6 +12,10 @@
   "labels": ["dependencies"],
   "rangeStrategy": "bump",
   "rebaseWhen": "behind-base-branch",
+  "minimumReleaseAge": "30 days",
+  "prCreation": "not-pending",
+  "internalChecksFilter": "strict",
+  "internalChecksAsSuccess": true,
   "lockFileMaintenance": {
     "enabled": true,
     "schedule": ["before 6am on monday"]
