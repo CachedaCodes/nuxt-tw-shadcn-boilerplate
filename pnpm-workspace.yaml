@@ -3,7 +3,7 @@ packages: []
 catalogs:
   build:
     '@nuxt/devtools': ^3.4.2
-    '@nuxt/eslint': ^1.15.2
+    '@nuxt/eslint': ^1.17.0
     '@nuxt/icon': ^2.5.1
     '@nuxt/test-utils': ^4.3.2
     '@nuxtjs/color-mode': ^4.0.1
@@ -26,7 +26,7 @@ catalogs:
     '@antfu/eslint-config': ^4.11.0
     '@types/node-telegram-bot-api': ^0.64.15
     '@vue/test-utils': ^2.5.0
-    eslint: 9.39.4
+    eslint: 9.39.5
     eslint-plugin-format: ^1.0.1
     happy-dom: ^20.14.5
     husky: ^9.1.7
