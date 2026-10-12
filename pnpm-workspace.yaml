@@ -50,7 +50,7 @@ catalogs:
     zod: ^4.3.6
 
   icons:
-    '@iconify-json/carbon': ^1.2.19
+    '@iconify-json/carbon': ^1.2.27
     '@iconify-json/twemoji': ^1.2.5
 
   server:
