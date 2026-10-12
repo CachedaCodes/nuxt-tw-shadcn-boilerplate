@@ -38,8 +38,8 @@ catalogs:
       version: 4.6.1
   dev:
     '@types/node-telegram-bot-api':
-      specifier: ^0.64.14
-      version: 0.64.14
+      specifier: ^0.64.15
+      version: 0.64.15
     '@vue/test-utils':
       specifier: ^2.4.6
       version: 2.4.6
@@ -211,7 +211,7 @@ importers:
         version: 0.11.3(pinia@3.0.4(typescript@5.8.3)(vue@3.5.43(typescript@5.8.3)))
       '@types/node-telegram-bot-api':
         specifier: catalog:dev
-        version: 0.64.14
+        version: 0.64.15
       '@vite-pwa/nuxt':
         specifier: catalog:build
         version: 1.1.1(vite@8.3.4(@types/node@25.5.0)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.39.0)(yaml@2.8.2))
@@ -3106,8 +3106,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node-telegram-bot-api@0.64.14':
-    resolution: {integrity: sha512-Nq1LAAw4PGpR8Vii5F7uGlAaAFmaT3cPIt7mUZv6VrftPsrt9xjmnhXD9hoKFstAzn/a5ZCr+ksbkmK+QBhZiA==}
+  '@types/node-telegram-bot-api@0.64.15':
+    resolution: {integrity: sha512-Ac1ZgSSHcO6P++7dsLSm3tjzInDLE0WrDTXHoUPKn/sUfDyR3f+IDtIUaSp/kLu+gn/jplGgGDY5CD95BEVk+g==}
 
   '@types/node@25.5.0':
     resolution: {integrity: sha512-jp2P3tQMSxWugkCUKLRPVUpGaL5MVFwF8RDuSRztfwgN1wmqJeMSbKlnEtQqU8UrhTmzEmZdu2I6v2dpp7XIxw==}
@@ -10929,7 +10929,7 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node-telegram-bot-api@0.64.14':
+  '@types/node-telegram-bot-api@0.64.15':
     dependencies:
       '@types/node': 25.5.0
       '@types/request': 2.48.13
