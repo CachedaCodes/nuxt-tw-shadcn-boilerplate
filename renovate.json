@@ -22,6 +22,11 @@
   },
   "packageRules": [
     {
+      "description": "Dashboard-approved majors: 15 day minimum release age",
+      "matchUpdateTypes": ["major"],
+      "minimumReleaseAge": "15 days"
+    },
+    {
       "description": "Node engine floor is maintained manually to avoid patch-floor churn",
       "matchDepTypes": ["engines"],
       "enabled": false
@@ -67,7 +72,7 @@
         "tailwind-merge",
         "class-variance-authority",
         "clsx",
-        "lucide-vue-next"
+        "@lucide/vue"
       ],
       "groupName": "styling"
     },
