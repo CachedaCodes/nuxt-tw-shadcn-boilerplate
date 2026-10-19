@@ -32,7 +32,7 @@
     "install": "catalog:server",
     "node-telegram-bot-api": "catalog:server",
     "nuxi": "catalog:build",
-    "prettier": "^3.9.6",
+    "prettier": "^3.9.8",
     "reka-ui": "catalog:frontend",
     "tailwind-merge": "catalog:frontend",
     "tailwindcss": "catalog:frontend",
