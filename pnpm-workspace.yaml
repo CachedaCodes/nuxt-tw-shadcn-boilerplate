@@ -18,7 +18,7 @@ catalogs:
 
   dev:
     '@types/node-telegram-bot-api': ^0.64.15
-    '@vue/test-utils': ^2.5.0
+    '@vue/test-utils': ^2.5.1
     eslint: 9.39.5
     happy-dom: ^20.14.5
     husky: ^9.1.7
