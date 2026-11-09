@@ -7,7 +7,7 @@ catalogs:
     '@nuxt/devtools': ^3.4.2
     '@nuxt/eslint': ^1.17.0
     '@nuxt/icon': ^2.5.1
-    '@nuxt/test-utils': ^4.3.2
+    '@nuxt/test-utils': ^4.3.3
     '@nuxtjs/color-mode': ^4.0.1
     '@nuxtjs/i18n': ^10.6.0
     '@pinia/nuxt': ^0.11.3
@@ -18,12 +18,12 @@ catalogs:
 
   dev:
     '@types/node-telegram-bot-api': ^0.64.15
-    '@vue/test-utils': ^2.5.0
+    '@vue/test-utils': ^2.5.1
     eslint: 9.39.5
-    happy-dom: ^20.14.5
+    happy-dom: ^20.14.6
     husky: ^9.1.7
     lint-staged: ^15.5.2
-    playwright-core: ^1.63.0
+    playwright-core: ^1.64.0
     typescript: 5.9.3
     vitest: ^4.1.11
     vue-tsc: ^3.3.11
