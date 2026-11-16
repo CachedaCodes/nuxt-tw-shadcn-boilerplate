@@ -4,7 +4,7 @@ catalogPrune: true
 
 catalogs:
   build:
-    '@nuxt/devtools': ^3.4.2
+    '@nuxt/devtools': ^3.4.3
     '@nuxt/eslint': ^1.17.0
     '@nuxt/icon': ^2.5.1
     '@nuxt/test-utils': ^4.3.2
